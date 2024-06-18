@@ -1,0 +1,29 @@
+# Arquivos de build gerados
+/build/
+/captures/
+.externalNativeBuild/
+.idea/
+
+# Arquivos de configuração locais
+.gradle/
+/local.properties
+
+# Arquivos de build gerados pelo Android Studio
+/.idea/workspace.xml
+/.idea/libraries
+
+# Arquivos de configuração do sistema
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+*.swp
+*.bak
+*.apk

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "717151868108",
+    "project_id": "lista-de-tarefas-compose-760d8",
+    "storage_bucket": "lista-de-tarefas-compose-760d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:717151868108:android:af797f609bfbb907bd9e69",
+        "android_client_info": {
+          "package_name": "com.ivandjr.listcompose"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbZFilQAISnwFakDrwQ5ilyIB0iYzzUQI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
