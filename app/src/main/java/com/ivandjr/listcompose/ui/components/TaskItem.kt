@@ -12,6 +12,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
@@ -57,7 +58,7 @@ fun TaskItem(task: Task, onClickRemove: (task: Task) -> Unit) {
             Text(
                 text = description ?: "",
                 modifier = Modifier.padding(bottom = paddingCard).constrainAs(txtDescription) {
-                    top.linkTo(txtTitle.bottom, margin = MaterialTheme.spacingTheme.small)
+                    top.linkTo(txtTitle.bottom, margin = paddingCard)
                     start.linkTo(parent.start)
                 },
             )
@@ -83,12 +84,12 @@ fun TaskItem(task: Task, onClickRemove: (task: Task) -> Unit) {
                         start.linkTo(txtPriority.end, margin = 8.dp)
                     },
             ) {}
-
+            val descriptionIcon = stringResource(R.string.description_remove_task)
             IconButton(
                 onClick = { onClickRemove.invoke(task) },
                 modifier = Modifier
                     .semantics {
-                        contentDescription = "Remoção da tarefa"
+                        contentDescription = descriptionIcon
                     }
                     .constrainAs(btnDelete) {
                         top.linkTo(cardPriority.top)

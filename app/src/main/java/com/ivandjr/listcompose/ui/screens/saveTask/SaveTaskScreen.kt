@@ -18,9 +18,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
+import com.ivandjr.listcompose.R
 import com.ivandjr.listcompose.ui.components.BoxButton
 import com.ivandjr.listcompose.ui.components.BoxText
 import com.ivandjr.listcompose.ui.components.RadioGroup
@@ -85,7 +87,7 @@ internal fun SaveTask(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(spacing, spacing, spacing, 0.dp),
-                label = "Título tarefa",
+                label = stringResource(R.string.save_task_field_title),
             )
 
             BoxText(
@@ -98,7 +100,7 @@ internal fun SaveTask(
                     .fillMaxWidth()
                     .padding(spacing, spacing, spacing, 0.dp)
                     .height(140.dp),
-                label = "Descrição",
+                label = stringResource(R.string.save_task_field_description),
                 maxLines = 5,
             )
 
@@ -109,7 +111,7 @@ internal fun SaveTask(
                     .fillMaxWidth()
                     .padding(spacing, spacing, spacing, 0.dp),
             ) {
-                Text(text = "Nível de prioridade: ")
+                Text(text = stringResource(R.string.save_task_field_priority))
                 RadioGroup(
                     selected = state.priorityId,
                     setSelected = { id -> handlePriorityChanged(id) },
@@ -119,7 +121,7 @@ internal fun SaveTask(
             }
 
             BoxButton(
-                text = "Salvar",
+                text = stringResource(R.string.save_task_field_save),
                 onClick = { onEventSent(Event.Submit) },
                 modifier = Modifier
                     .padding(spacing)

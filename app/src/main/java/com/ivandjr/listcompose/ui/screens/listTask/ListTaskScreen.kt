@@ -19,6 +19,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -53,7 +54,12 @@ internal fun ListTask(
                     containerColor = MaterialTheme.colorScheme.primary,
                     titleContentColor = MaterialTheme.colorScheme.onPrimary,
                 ),
-                title = { Text("Lista de tarefas", fontWeight = FontWeight.Bold) },
+                title = {
+                    Text(
+                        stringResource(R.string.task_screen_title),
+                        fontWeight = FontWeight.Bold,
+                    )
+                },
             )
         },
         floatingActionButton = {
@@ -63,7 +69,7 @@ internal fun ListTask(
             ) {
                 Image(
                     imageVector = ImageVector.vectorResource(id = R.drawable.ic_add),
-                    contentDescription = "Ícone de adicionar tarefa",
+                    contentDescription = stringResource(R.string.description_icon_add_task),
                 )
             }
         },
@@ -86,10 +92,12 @@ internal fun ListTask(
                 onDismissRequest = { onEventSent(Event.FinishRemoveDialog) },
                 onConfirmation = {
                     onEventSent(Event.ConfirmationRemoveDialog)
-                    println("Confirmation registered")
                 },
-                dialogTitle = "Tem certeza que deseja remover?",
-                dialogText = "Confirmando a tarefa \"${state.taskToRemove?.title}\" será removida",
+                dialogTitle = stringResource(R.string.dialog_remove_title),
+                dialogText = stringResource(
+                    R.string.dialog_remove_text,
+                    state.taskToRemove?.title ?: "",
+                ),
                 icon = Icons.Default.Close,
             )
         }

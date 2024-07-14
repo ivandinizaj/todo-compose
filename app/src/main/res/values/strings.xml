@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">ListCompose</string>
+    <string name="description_remove_task">Remoção da tarefa</string>
+
+    <!--    Dialog-->
+    <string name="dialog_dismiss_text">Cancelar</string>
+    <string name="dialog_confirm_text">Confirmar</string>
+    <string name="dialog_remove_title">Tem certeza que deseja remover?</string>
+    <string name="dialog_remove_text">Confirmando a tarefa \"%1$s\" será removida</string>
+
+    <!-- Screen List Task -->
+    <string name="description_icon_add_task">Ícone de adicionar tarefa</string>
+    <string name="task_screen_title">Lista de tarefas</string>
+
+    <!-- Screen SaveTask -->
+    <string name="save_task_field_title">Título tarefa</string>
+    <string name="save_task_field_description">Descrição</string>
+    <string name="save_task_field_priority">"Nível de prioridade: "</string>
+    <string name="save_task_field_save">Salvar</string>
 </resources>
